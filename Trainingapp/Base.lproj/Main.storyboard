@@ -113,16 +113,17 @@
                         <outlet property="passwordTextField" destination="0J1-uF-E0H" id="oaJ-5w-MaH"/>
                         <outlet property="signInButton" destination="8Kc-eD-nyI" id="zel-Ie-NPV"/>
                         <outlet property="signUpButton" destination="UE8-hr-swi" id="E3p-O1-raS"/>
+                        <segue destination="vTh-g5-Or1" kind="show" id="kES-iX-pmR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-362.39999999999998" y="76.911544227886068"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Work Outs Table View Controller-->
         <scene sceneID="oHl-iz-3R3">
             <objects>
-                <tableViewController id="vTh-g5-Or1" sceneMemberID="viewController">
+                <tableViewController id="vTh-g5-Or1" customClass="WorkOutsTableViewController" customModule="Trainingapp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Cmn-cE-7jE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
