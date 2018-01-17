@@ -11,7 +11,7 @@ import UIKit
 class WorkOutsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var workOutNameLabel: UILabel!
-    @IBOutlet weak var amountOfWorkoutsLabel: UILabel!
+    @IBOutlet weak var amountOfExercisesLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

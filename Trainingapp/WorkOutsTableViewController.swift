@@ -7,12 +7,23 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class WorkOutsTableViewController: UITableViewController {
+    
+    let array1: [String] = ["Ben", "Bröst", "Armar"]
+    let array2: [Int] = [6, 4, 3]
+    
+    var ref: DatabaseReference!
+    var userID: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        ref = Database.database().reference()
+        userID = Auth.auth().currentUser?.uid
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,23 +40,26 @@ class WorkOutsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return array1.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! WorkOutsTableViewCell
+        
+        cell.workOutNameLabel.adjustsFontSizeToFitWidth = true
+        cell.amountOfExercisesLabel.adjustsFontSizeToFitWidth = true
+        cell.workOutNameLabel.text = array1[indexPath.row]
+        cell.amountOfExercisesLabel.text = "This workout has \(array2[indexPath.row]) exercises"
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

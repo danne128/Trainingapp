@@ -38,7 +38,7 @@ class MainViewController: UIViewController {
         // check if user is logged in
         if Auth.auth().currentUser != nil {
             //if user is signed in it will be transfered to the next window
-            //performSegue(withIdentifier: "mainToWorkouts", sender: nil)
+            performSegue(withIdentifier: "mainToWorkouts", sender: nil)
         }
         else {
             print("user is not signed on")
@@ -69,7 +69,7 @@ class MainViewController: UIViewController {
             Auth.auth().signIn(withEmail: email!, password: password!, completion: { (user, error) in
                 if error == nil {
                     print("user logged in")
-                    //self.performSegue(withIdentifier: "mainToWorkouts", sender: nil)
+                    self.performSegue(withIdentifier: "mainToWorkouts", sender: nil)
                 }
                 else {
                     print(error!.localizedDescription)
