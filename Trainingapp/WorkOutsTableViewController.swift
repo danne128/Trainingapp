@@ -15,20 +15,59 @@ class WorkOutsTableViewController: UITableViewController {
     let array1: [String] = ["Ben", "Bröst", "Armar"]
     let array2: [Int] = [6, 4, 3]
     
+    var workOuts: [String] = []
+    var amountOfExercises: [Int] = []
+    
     var ref: DatabaseReference!
     var userID: String!
+    var workOutPath: DatabaseReference!
+    
+    var end = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        end = false
         
         ref = Database.database().reference()
         userID = Auth.auth().currentUser?.uid
+        workOutPath = ref.child("users").child(userID).child("workouts")
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        workOutPath.observeSingleEvent(of: .value) { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            if value != nil {
+                let keys = value!.allKeys
+                for key in keys {
+                    self.workOuts.append(key as! String)
+                }
+                
+                for exercise in self.workOuts {
+                    self.workOutPath.child(exercise).observeSingleEvent(of: .value, with: { (snapshot2) in
+                        let value2 = snapshot2.value as? NSDictionary
+                        let keys2 = value2!.allKeys
+                        self.amountOfExercises.append(keys2.count)
+                        
+                        if self.amountOfExercises.count == self.workOuts.count {
+                            self.end = true
+                        }
+                        
+                        if self.end == true {
+                            self.tableView.reloadData()
+                        }
+                    })
+                }
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+            }
+            else {
+                print("Your workout table is empty")
+                let noDataLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.tableView.bounds.size.width, height: self.tableView.bounds.size.height))
+                noDataLabel.text          = "No data available"
+                noDataLabel.textColor     = UIColor.black
+                noDataLabel.textAlignment = .center
+                self.tableView.backgroundView  = noDataLabel
+                self.tableView.separatorStyle  = .none
+            }
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,7 +84,7 @@ class WorkOutsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return array1.count
+        return workOuts.count
     }
 
     
@@ -55,8 +94,8 @@ class WorkOutsTableViewController: UITableViewController {
         
         cell.workOutNameLabel.adjustsFontSizeToFitWidth = true
         cell.amountOfExercisesLabel.adjustsFontSizeToFitWidth = true
-        cell.workOutNameLabel.text = array1[indexPath.row]
-        cell.amountOfExercisesLabel.text = "This workout has \(array2[indexPath.row]) exercises"
+        cell.workOutNameLabel.text = workOuts[indexPath.row]
+        cell.amountOfExercisesLabel.text = "This workout has \(amountOfExercises[indexPath.row]) exercises"
         return cell
     }
     
