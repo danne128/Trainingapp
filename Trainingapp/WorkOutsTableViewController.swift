@@ -65,6 +65,7 @@ class WorkOutsTableViewController: UITableViewController {
                 noDataLabel.textAlignment = .center
                 self.tableView.backgroundView  = noDataLabel
                 self.tableView.separatorStyle  = .none
+                self.tableView.tableFooterView = UIView()
             }
         }
         
@@ -89,6 +90,7 @@ class WorkOutsTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        tableView.tableFooterView = UIView()
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! WorkOutsTableViewCell
         
