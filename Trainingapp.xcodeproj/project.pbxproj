@@ -13,6 +13,8 @@
 		65316501200E5780000020B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65316500200E5780000020B6 /* Assets.xcassets */; };
 		65316504200E5780000020B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65316502200E5780000020B6 /* LaunchScreen.storyboard */; };
 		6531650C200E582F000020B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6531650B200E582F000020B6 /* GoogleService-Info.plist */; };
+		653DA06D200F585C00C83CFB /* WorkOutsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DA06C200F585C00C83CFB /* WorkOutsTableViewCell.swift */; };
+		653DA06F200F588E00C83CFB /* WorkOutsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DA06E200F588E00C83CFB /* WorkOutsTableViewController.swift */; };
 		655E435B200E5E480083BBA7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655E435A200E5E480083BBA7 /* MainViewController.swift */; };
 		FEFD3848BC675391E5C69984 /* Pods_Trainingapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B9BEC6FD591B49D65A9F65 /* Pods_Trainingapp.framework */; };
 /* End PBXBuildFile section */
@@ -28,6 +30,8 @@
 		65316503200E5780000020B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65316505200E5780000020B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6531650B200E582F000020B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		653DA06C200F585C00C83CFB /* WorkOutsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutsTableViewCell.swift; sourceTree = "<group>"; };
+		653DA06E200F588E00C83CFB /* WorkOutsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutsTableViewController.swift; sourceTree = "<group>"; };
 		655E435A200E5E480083BBA7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9CA91789368A6B5E34D80163 /* Pods-Trainingapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trainingapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trainingapp/Pods-Trainingapp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,8 +79,10 @@
 			children = (
 				653164F9200E5780000020B6 /* AppDelegate.swift */,
 				653164FD200E5780000020B6 /* Main.storyboard */,
+				653DA06E200F588E00C83CFB /* WorkOutsTableViewController.swift */,
 				65136296200E651700435081 /* RegisterViewController.swift */,
 				655E435A200E5E480083BBA7 /* MainViewController.swift */,
+				653DA06C200F585C00C83CFB /* WorkOutsTableViewCell.swift */,
 				65316500200E5780000020B6 /* Assets.xcassets */,
 				65316502200E5780000020B6 /* LaunchScreen.storyboard */,
 				65316505200E5780000020B6 /* Info.plist */,
@@ -230,9 +236,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				653DA06F200F588E00C83CFB /* WorkOutsTableViewController.swift in Sources */,
 				65136297200E651700435081 /* RegisterViewController.swift in Sources */,
 				655E435B200E5E480083BBA7 /* MainViewController.swift in Sources */,
 				653164FA200E5780000020B6 /* AppDelegate.swift in Sources */,
+				653DA06D200F585C00C83CFB /* WorkOutsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
