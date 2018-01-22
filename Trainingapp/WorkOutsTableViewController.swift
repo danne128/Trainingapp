@@ -60,15 +60,32 @@ class WorkOutsTableViewController: UITableViewController {
             else {
                 print("Your workout table is empty")
                 let noDataLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.tableView.bounds.size.width, height: self.tableView.bounds.size.height))
-                noDataLabel.text          = "No data available"
-                noDataLabel.textColor     = UIColor.black
+                noDataLabel.font = UIFont(name: noDataLabel.font.fontName, size: 20)
+                noDataLabel.text = "You dont have any workouts yet"
+                noDataLabel.textColor = UIColor.black
                 noDataLabel.textAlignment = .center
+                
+                
+                let addDataButton: UIButton = UIButton(frame: CGRect(x: 100, y: 100, width: 200, height: 50))
+                addDataButton.backgroundColor = .black
+                addDataButton.setTitle("Add a workout", for: .normal)
+                addDataButton.titleLabel?.font = UIFont(name: (addDataButton.titleLabel?.font.fontName)!, size: 20)
+                addDataButton.titleLabel?.adjustsFontSizeToFitWidth = true
+                addDataButton.frame.origin = CGPoint(x: self.tableView.bounds.size.width*0.25, y: self.tableView.bounds.height*0.5)
+                addDataButton.addTarget(self, action: #selector(self.addDataButtonWasClicked), for: .touchUpInside)
+                
+    
                 self.tableView.backgroundView  = noDataLabel
+                self.tableView.addSubview(addDataButton)
                 self.tableView.separatorStyle  = .none
                 self.tableView.tableFooterView = UIView()
             }
         }
         
+    }
+    
+    @objc func addDataButtonWasClicked() {
+        print("hej")
     }
 
     override func didReceiveMemoryWarning() {
