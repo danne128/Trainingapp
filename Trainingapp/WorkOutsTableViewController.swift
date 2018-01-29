@@ -32,6 +32,8 @@ class WorkOutsTableViewController: UITableViewController {
         userID = Auth.auth().currentUser?.uid
         workOutPath = ref.child("users").child(userID).child("workouts")
         
+        self.navigationItem.hidesBackButton = true
+        
         //loadData()
         
         /*workOutPath.observeSingleEvent(of: .value) { (snapshot) in
