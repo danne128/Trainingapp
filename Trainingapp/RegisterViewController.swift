@@ -61,7 +61,7 @@ class RegisterViewController: UIViewController {
                         }
                         else {
                             print("User added succesfully")
-                            //self.performSegue(withIdentifier: "RegisterToWorkouts", sender: nil)
+                            self.performSegue(withIdentifier: "RegisterToWorkouts", sender: nil)
                         }
                     })
                     

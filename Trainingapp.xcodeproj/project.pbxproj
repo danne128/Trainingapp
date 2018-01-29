@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65084067201A32E000A7F56F /* CreateWorkoutAndExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65084066201A32E000A7F56F /* CreateWorkoutAndExerciseViewController.swift */; };
 		65136297200E651700435081 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65136296200E651700435081 /* RegisterViewController.swift */; };
 		653164FA200E5780000020B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653164F9200E5780000020B6 /* AppDelegate.swift */; };
 		653164FF200E5780000020B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 653164FD200E5780000020B6 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		17B9BEC6FD591B49D65A9F65 /* Pods_Trainingapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trainingapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C246ED25ADF70881AC24C06 /* Pods-Trainingapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trainingapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trainingapp/Pods-Trainingapp.release.xcconfig"; sourceTree = "<group>"; };
+		65084066201A32E000A7F56F /* CreateWorkoutAndExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWorkoutAndExerciseViewController.swift; sourceTree = "<group>"; };
 		65136296200E651700435081 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		653164F6200E5780000020B6 /* Trainingapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trainingapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		653164F9200E5780000020B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,9 +81,10 @@
 			children = (
 				653164F9200E5780000020B6 /* AppDelegate.swift */,
 				653164FD200E5780000020B6 /* Main.storyboard */,
+				65084066201A32E000A7F56F /* CreateWorkoutAndExerciseViewController.swift */,
+				655E435A200E5E480083BBA7 /* MainViewController.swift */,
 				653DA06E200F588E00C83CFB /* WorkOutsTableViewController.swift */,
 				65136296200E651700435081 /* RegisterViewController.swift */,
-				655E435A200E5E480083BBA7 /* MainViewController.swift */,
 				653DA06C200F585C00C83CFB /* WorkOutsTableViewCell.swift */,
 				65316500200E5780000020B6 /* Assets.xcassets */,
 				65316502200E5780000020B6 /* LaunchScreen.storyboard */,
@@ -238,6 +241,7 @@
 			files = (
 				653DA06F200F588E00C83CFB /* WorkOutsTableViewController.swift in Sources */,
 				65136297200E651700435081 /* RegisterViewController.swift in Sources */,
+				65084067201A32E000A7F56F /* CreateWorkoutAndExerciseViewController.swift in Sources */,
 				655E435B200E5E480083BBA7 /* MainViewController.swift in Sources */,
 				653164FA200E5780000020B6 /* AppDelegate.swift in Sources */,
 				653DA06D200F585C00C83CFB /* WorkOutsTableViewCell.swift in Sources */,
